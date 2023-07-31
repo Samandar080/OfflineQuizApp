@@ -62,7 +62,5 @@
             android:layout_height="30dp"
             android:layout_marginLeft="70dp"
             android:src="@drawable/baseline_exit_to_app_24"/>
-x
-
 
 </LinearLayout>
