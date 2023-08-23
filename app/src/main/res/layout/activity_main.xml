@@ -57,7 +57,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="Matematika"
+                android:text="Math"
                 android:textColor="#CC000000"
                 android:textSize="18sp"
                 android:textStyle="bold"/>
@@ -80,7 +80,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="Informatika"
+                android:text="Information"
                 android:textColor="#CC000000"
                 android:textSize="18sp"
                 android:textStyle="bold"/>
@@ -116,7 +116,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="Ingliz Tili"
+                android:text="English"
                 android:textColor="#CC000000"
                 android:textSize="18sp"
                 android:textStyle="bold"/>
@@ -139,7 +139,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="Fizika"
+                android:text="Physics"
                 android:textColor="#CC000000"
                 android:textSize="18sp"
                 android:textStyle="bold"/>

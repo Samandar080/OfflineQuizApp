@@ -17,13 +17,13 @@ import java.util.TimerTask;
 
 public class QuizActivity extends AppCompatActivity {
     private List<QuestionsList> questionsLists;
-    private int seconds = 0;
+//    private int seconds = 0;
     private TextView questions;
     private TextView question;
     private AppCompatButton option1, option2, option3, option4;
     private AppCompatButton nextBtn;
-    private Timer quizTimer;
-    private int totalTimeInMins = 1;
+//    private Timer quizTimer;
+//    private int totalTimeInMins = 1;
     private int currentQuestionPosition = 0;
     private String selectedOptionByUser = "";
 
@@ -46,7 +46,7 @@ public class QuizActivity extends AppCompatActivity {
         final String getSelectedTopicName = getIntent().getStringExtra("selectedTopic");
         selectedTopicName.setText(getSelectedTopicName);
         questionsLists = QuestionBank.getQuestions(getSelectedTopicName);
-        startTimer(timer);
+//        startTimer(timer);
         questions.setText((currentQuestionPosition + 1) + "/" + questionsLists.size());
         question.setText(questionsLists.get(0).getQuestion());
         option1.setText(questionsLists.get(0).getOption1());
@@ -120,8 +120,8 @@ public class QuizActivity extends AppCompatActivity {
         backBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                quizTimer.purge();
-                quizTimer.cancel();
+//                quizTimer.purge();
+//                quizTimer.cancel();
 
                 startActivity(new Intent(QuizActivity.this, MainActivity.class));
                 finish();
@@ -167,47 +167,47 @@ public class QuizActivity extends AppCompatActivity {
         }
     }
 
-    private void startTimer(TextView timerTextView) {
-        quizTimer = new Timer();
-        quizTimer.scheduleAtFixedRate(new TimerTask() {
-            @Override
-            public void run() {
-                if (seconds == 0) {
-                    totalTimeInMins--;
-                    seconds = 59;
-                }
-                else if (seconds == 0 && totalTimeInMins == 0) {
-                    quizTimer.purge();
-                    quizTimer.cancel();
-
-                    Toast.makeText(QuizActivity.this, "Time Over", Toast.LENGTH_SHORT).show();
-
-                    Intent intent = new Intent(QuizActivity.this, QuizResults.class);
-                    intent.putExtra("correct", getCorrectAnswers());
-                    intent.putExtra("incorrect", getInCorrectAnswers());
-                    startActivity(intent);
-                    finish();
-
-                } else {
-                    seconds--;
-                }
-                runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        String finalMinutes = String.valueOf(totalTimeInMins);
-                        String finalSeconds = String.valueOf(seconds);
-                        if (finalMinutes.length() == 1) {
-                            finalMinutes = "0" + finalMinutes;
-                        }
-                        if (finalSeconds.length() == 1) {
-                            finalSeconds = "0" + finalSeconds;
-                        }
-                        timerTextView.setText(finalMinutes + ":" + finalSeconds);
-                    }
-                });
-            }
-        }, 1000, 1000);
-    }
+//    private void startTimer(TextView timerTextView) {
+//        quizTimer = new Timer();
+//        quizTimer.scheduleAtFixedRate(new TimerTask() {
+//            @Override
+//            public void run() {
+//                if (seconds == 0) {
+//                    totalTimeInMins--;
+//                    seconds = 59;
+//                }
+//                else if (seconds == 0 && totalTimeInMins == 0) {
+//                    quizTimer.purge();
+//                    quizTimer.cancel();
+//
+//                    Toast.makeText(QuizActivity.this, "Time Over", Toast.LENGTH_SHORT).show();
+//
+//                    Intent intent = new Intent(QuizActivity.this, QuizResults.class);
+//                    intent.putExtra("correct", getCorrectAnswers());
+//                    intent.putExtra("incorrect", getInCorrectAnswers());
+//                    startActivity(intent);
+//                    finish();
+//
+//                } else {
+//                    seconds--;
+//                }
+//                runOnUiThread(new Runnable() {
+//                    @Override
+//                    public void run() {
+//                        String finalMinutes = String.valueOf(totalTimeInMins);
+//                        String finalSeconds = String.valueOf(seconds);
+//                        if (finalMinutes.length() == 1) {
+//                            finalMinutes = "0" + finalMinutes;
+//                        }
+//                        if (finalSeconds.length() == 1) {
+//                            finalSeconds = "0" + finalSeconds;
+//                        }
+//                        timerTextView.setText(finalMinutes + ":" + finalSeconds);
+//                    }
+//                });
+//            }
+//        }, 1000, 1000);
+//    }
 
     private int getCorrectAnswers() {
         int correctAnswers = 0;
@@ -239,8 +239,8 @@ public class QuizActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        quizTimer.purge();
-        quizTimer.cancel();
+//        quizTimer.purge();
+//        quizTimer.cancel();
 
         startActivity(new Intent(QuizActivity.this, MainActivity.class));
         finish();

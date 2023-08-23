@@ -16,55 +16,55 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        final LinearLayout Matematika = findViewById(R.id.javaLayout);
-        final LinearLayout Informatika = findViewById(R.id.phpLayout);
-        final LinearLayout InglizTili = findViewById(R.id.htmlLayout);
-        final LinearLayout Fizika = findViewById(R.id.androidLayout);
+        final LinearLayout Math = findViewById(R.id.javaLayout);
+        final LinearLayout Information = findViewById(R.id.phpLayout);
+        final LinearLayout English = findViewById(R.id.htmlLayout);
+        final LinearLayout Physics = findViewById(R.id.androidLayout);
 
         final Button startBtn = findViewById(R.id.startQuizBtn);
 
-        Matematika.setOnClickListener(new View.OnClickListener() {
+        Math.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                selectedTopicName = "Matematika";
-                Matematika.setBackgroundResource(R.drawable.round_back_white_stroke10);
+                selectedTopicName = "Math";
+                Math.setBackgroundResource(R.drawable.round_back_white_stroke10);
 
-                Informatika.setBackgroundResource(R.drawable.round_back_white10);
-                InglizTili.setBackgroundResource(R.drawable.round_back_white10);
-                Fizika.setBackgroundResource(R.drawable.round_back_white10);
+                Information.setBackgroundResource(R.drawable.round_back_white10);
+                English.setBackgroundResource(R.drawable.round_back_white10);
+                Physics.setBackgroundResource(R.drawable.round_back_white10);
             }
         });
 
-        Informatika.setOnClickListener(new View.OnClickListener() {
+        Information.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 selectedTopicName = "Informatika";
-                Informatika.setBackgroundResource(R.drawable.round_back_white_stroke10);
+                Information.setBackgroundResource(R.drawable.round_back_white_stroke10);
 
-                Matematika.setBackgroundResource(R.drawable.round_back_white10);
-                InglizTili.setBackgroundResource(R.drawable.round_back_white10);
-                Fizika.setBackgroundResource(R.drawable.round_back_white10);
+                Math.setBackgroundResource(R.drawable.round_back_white10);
+                English.setBackgroundResource(R.drawable.round_back_white10);
+                Physics.setBackgroundResource(R.drawable.round_back_white10);
 
             }
         });
-        InglizTili.setOnClickListener(new View.OnClickListener() {
+        English.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 selectedTopicName = "Ingliz Tili";
-                InglizTili.setBackgroundResource(R.drawable.round_back_white_stroke10);
-                Informatika.setBackgroundResource(R.drawable.round_back_white10);
-                Matematika.setBackgroundResource(R.drawable.round_back_white10);
-                Fizika.setBackgroundResource(R.drawable.round_back_white10);
+                English.setBackgroundResource(R.drawable.round_back_white_stroke10);
+                Information.setBackgroundResource(R.drawable.round_back_white10);
+                Math.setBackgroundResource(R.drawable.round_back_white10);
+                Physics.setBackgroundResource(R.drawable.round_back_white10);
             }
         });
-        Fizika.setOnClickListener(new View.OnClickListener() {
+        Physics.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 selectedTopicName = "Fizika";
-                Fizika.setBackgroundResource(R.drawable.round_back_white_stroke10);
-                Informatika.setBackgroundResource(R.drawable.round_back_white10);
-                InglizTili.setBackgroundResource(R.drawable.round_back_white10);
-                Matematika.setBackgroundResource(R.drawable.round_back_white10);
+                Physics.setBackgroundResource(R.drawable.round_back_white_stroke10);
+                Information.setBackgroundResource(R.drawable.round_back_white10);
+                English.setBackgroundResource(R.drawable.round_back_white10);
+                Math.setBackgroundResource(R.drawable.round_back_white10);
             }
         });
         startBtn.setOnClickListener(new View.OnClickListener() {

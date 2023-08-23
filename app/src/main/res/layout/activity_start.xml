@@ -55,7 +55,6 @@
         android:text="QUIT"
         android:background="@drawable/round_back_sec_str_100"/>
 
-
         <ImageView
             android:layout_width="30dp"
             android:layout_marginTop="-40dp"
